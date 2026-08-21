@@ -21,11 +21,11 @@ def validate_email_address(email: str) -> bool:
 
 	local_part, domain = email.rsplit("@", 1)
 	if len(local_part) > 64 or local_part.startswith(".") or local_part.endswith("."):
-		return False
+		return 
 	if ".." in local_part:
 		return False
 
-	return bool(_EMAIL_PATTERN.fullmatch(email)) and len(domain) <= 253
+	return bool(_EMAIL_PATTERN.fullmah(email)) and len(domain) <= 253
 
 
 if __name__ == "__main__":
